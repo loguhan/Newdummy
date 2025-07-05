@@ -10,3 +10,16 @@ C:\Users\Administrator\RiderProjects\Fplayer\Fplayer\obj\Debug\net6.0\Fplayer.dl
 C:\Users\Administrator\RiderProjects\Fplayer\Fplayer\obj\Debug\net6.0\refint\Fplayer.dll
 C:\Users\Administrator\RiderProjects\Fplayer\Fplayer\obj\Debug\net6.0\Fplayer.pdb
 C:\Users\Administrator\RiderProjects\Fplayer\Fplayer\obj\Debug\net6.0\ref\Fplayer.dll
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\Fplayer.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\Fplayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\Fplayer.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\Fplayer.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\Fplayer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\Fplayer.sourcelink.json
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\Fplayer.dll
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\refint\Fplayer.dll
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\Fplayer.pdb
+C:\Users\Administrator\Desktop\dummy\Fplayer\bin\Debug\net6.0\Fplayer.deps.json
+C:\Users\Administrator\Desktop\dummy\Fplayer\bin\Debug\net6.0\Fplayer.dll
+C:\Users\Administrator\Desktop\dummy\Fplayer\bin\Debug\net6.0\Fplayer.pdb
+C:\Users\Administrator\Desktop\dummy\Fplayer\obj\Debug\net6.0\ref\Fplayer.dll

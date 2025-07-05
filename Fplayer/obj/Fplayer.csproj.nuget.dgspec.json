@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\RiderProjects\\Fplayer\\Fplayer\\Fplayer.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\dummy\\Fplayer\\Fplayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\RiderProjects\\Fplayer\\Fplayer\\Fplayer.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\dummy\\Fplayer\\Fplayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\RiderProjects\\Fplayer\\Fplayer\\Fplayer.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\dummy\\Fplayer\\Fplayer.csproj",
         "projectName": "Fplayer",
-        "projectPath": "C:\\Users\\Administrator\\RiderProjects\\Fplayer\\Fplayer\\Fplayer.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\dummy\\Fplayer\\Fplayer.csproj",
         "packagesPath": "E:\\NuGet\\packages",
-        "outputPath": "C:\\Users\\Administrator\\RiderProjects\\Fplayer\\Fplayer\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\dummy\\Fplayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

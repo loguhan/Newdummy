@@ -30,7 +30,8 @@ internal class CommandAdapter
         { "action", DummyAction },
         { "startmove", StartMove },
         { "stopmove", StopMove },
-        { "jump", Jump }
+        { "jump", Jump },
+        { "tp", TeleportDummyToPlayer }
     };
 
     public static void Adapter(CommandArgs args)
@@ -57,7 +58,7 @@ internal class CommandAdapter
     {
         if (args.Parameters.Count < 2)
         {
-            args.Player.SendErrorMessage("用法: /fdummy reconnect <假人名称>");
+            args.Player.SendErrorMessage("用法: /dummy reconnect <假人名称>");
             return;
         }
 
@@ -102,7 +103,7 @@ internal class CommandAdapter
     {
         if (args.Parameters.Count < 2)
         {
-            args.Player.SendErrorMessage("用法: /fdummy remove <假人名称>");
+            args.Player.SendErrorMessage("用法: /dummy remove <假人名称>");
             return;
         }
 
@@ -128,12 +129,12 @@ internal class CommandAdapter
     /// <returns>命令结果</returns>
     public static CommandResult CreateDummy(CommandArgs args)
     {
-        if (args.Parameters.Count < 1)
+        if (args.Parameters.Count < 2)
         {
-            return new CommandResult(false, "用法: /fdummy create <假人名称>");
+            return new CommandResult(false, "用法: /dummy create <假人名称>");
         }
 
-        string dummyName = args.Parameters[0];
+        string dummyName = args.Parameters[1];
         
         // 检查假人名称是否已存在
         if (Plugin.DummyPlayers.Any(d => d.Name == dummyName))
@@ -141,17 +142,22 @@ internal class CommandAdapter
             return new CommandResult(false, $"假人 '{dummyName}' 已存在");
         }
 
-        // 确定初始位置
+        // 确定初始位置 - 始终使用世界出生点
         Vector2 initialPosition;
-        if (args.Player != null)
+        try
         {
-            // 如果是玩家创建的，在玩家位置创建
-            initialPosition = new Vector2(args.Player.X, args.Player.Y);
+            // 使用世界出生点 - 确保坐标正确
+            int spawnX = Main.spawnTileX;
+            int spawnY = Main.spawnTileY;
+            
+            // 转换为像素坐标
+            initialPosition = new Vector2(spawnX * 16f, spawnY * 16f);
+            
         }
-        else
+        catch
         {
-            // 如果是服务端创建的，在出生点创建
-            initialPosition = new Vector2(Main.spawnTileX * 16f, Main.spawnTileY * 16f);
+            // 如果获取出生点失败，使用默认位置
+            initialPosition = new Vector2(100 * 16f, 100 * 16f);
         }
 
         // 创建假人
@@ -176,8 +182,20 @@ internal class CommandAdapter
 
         Plugin.DummyPlayers.Add(dummy);
         
+        // 启动假人连接
+        try
+        {
+            dummy.GameLoop("127.0.0.1", Plugin.Port, TShock.Config.Settings.ServerPassword);
+        }
+        catch (Exception ex)
+        {
+            // 如果连接失败，从列表中移除
+            Plugin.DummyPlayers.Remove(dummy);
+            return new CommandResult(false, $"假人 '{dummyName}' 连接失败: {ex.Message}");
+        }
+        
         string creator = args.Player?.Name ?? "服务端";
-        return new CommandResult(true, $"假人 '{dummyName}' 已由 {creator} 在位置 ({initialPosition.X:F1}, {initialPosition.Y:F1}) 创建");
+        return new CommandResult(true, $"假人 '{dummyName}' 已由 {creator} 在世界出生点 ({initialPosition.X:F1}, {initialPosition.Y:F1}) 创建并连接");
     }
 
     private static void DummyAction(CommandArgs args)
@@ -198,42 +216,36 @@ internal class CommandAdapter
             var action = args.Parameters[2].ToLower();
             switch (action)
             {
-                case "say":
-                    if (args.Parameters.Count < 4)
-                    {
-                        args.Player.SendErrorMessage("用法: /dummy action [name] say [内容]");
-                        return;
-                    }
-                    var msg = string.Join(' ', args.Parameters.Skip(3));
-                    ply.ChatText(msg);
-                    args.Player.SendSuccessMessage($"假人[{args.Parameters[1]}] 说: {msg}");
-                    break;
                 case "move":
                     if (args.Parameters.Count < 4)
                     {
                         args.Player.SendErrorMessage("用法: /dummy action [name] move [left|right|stop]");
                         return;
                     }
-                    var dir = args.Parameters[3].ToLower();
-                    ply.Move(dir);
-                    args.Player.SendSuccessMessage($"假人[{args.Parameters[1]}] move: {dir}");
+                    ply.Move(args.Parameters[3]);
+                    args.Player.SendSuccessMessage($"假人 '{args.Parameters[1]}' 执行移动动作: {args.Parameters[3]}");
                     break;
                 case "jump":
                     ply.Jump();
-                    args.Player.SendSuccessMessage($"假人[{args.Parameters[1]}] 跳跃");
+                    args.Player.SendSuccessMessage($"假人 '{args.Parameters[1]}' 执行跳跃动作");
                     break;
                 case "use":
                     ply.Use();
-                    args.Player.SendSuccessMessage($"假人[{args.Parameters[1]}] 使用物品");
+                    args.Player.SendSuccessMessage($"假人 '{args.Parameters[1]}' 执行使用物品动作");
+                    break;
+                case "say":
+                    if (args.Parameters.Count < 4)
+                    {
+                        args.Player.SendErrorMessage("用法: /dummy action [name] say [消息]");
+                        return;
+                    }
+                    ply.ChatText(args.Parameters[3]);
+                    args.Player.SendSuccessMessage($"假人 '{args.Parameters[1]}' 发送消息: {args.Parameters[3]}");
                     break;
                 default:
-                    args.Player.SendErrorMessage("未知action类型: " + action);
+                    args.Player.SendErrorMessage("未知动作类型，支持: move, jump, use, say");
                     break;
             }
-        }
-        else
-        {
-            args.Player.SendErrorMessage("请输入正确的名称和action类型!");
         }
     }
 
@@ -244,33 +256,30 @@ internal class CommandAdapter
             args.Player.SendErrorMessage("用法: /dummy startmove [name] [left|right]");
             return;
         }
-        if (!string.IsNullOrEmpty(args.Parameters[1]) && !string.IsNullOrEmpty(args.Parameters[2]))
+
+        string dummyName = args.Parameters[1];
+        string direction = args.Parameters[2].ToLower();
+        var dummy = FindDummyByName(dummyName);
+
+        if (dummy == null)
         {
-            var ply = FindDummyByName(args.Parameters[1]);
-            if (ply == null)
-            {
-                args.Player.SendErrorMessage("目标假人不存在!");
-                return;
-            }
-            var direction = args.Parameters[2].ToLower();
-            switch (direction)
-            {
-                case "left":
-                    ply.StartMovingLeft();
-                    args.Player.SendSuccessMessage($"假人[{args.Parameters[1]}] 开始持续向左移动");
-                    break;
-                case "right":
-                    ply.StartMovingRight();
-                    args.Player.SendSuccessMessage($"假人[{args.Parameters[1]}] 开始持续向右移动");
-                    break;
-                default:
-                    args.Player.SendErrorMessage("方向必须是 left 或 right");
-                    break;
-            }
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
         }
-        else
+
+        switch (direction)
         {
-            args.Player.SendErrorMessage("请输入正确的名称和方向!");
+            case "left":
+                dummy.StartMovingLeft();
+                args.Player.SendSuccessMessage($"假人 '{dummyName}' 开始持续向左移动");
+                break;
+            case "right":
+                dummy.StartMovingRight();
+                args.Player.SendSuccessMessage($"假人 '{dummyName}' 开始持续向右移动");
+                break;
+            default:
+                args.Player.SendErrorMessage("方向参数错误，请使用 left 或 right");
+                break;
         }
     }
 
@@ -281,43 +290,71 @@ internal class CommandAdapter
             args.Player.SendErrorMessage("用法: /dummy stopmove [name]");
             return;
         }
-        if (!string.IsNullOrEmpty(args.Parameters[1]))
+
+        string dummyName = args.Parameters[1];
+        var dummy = FindDummyByName(dummyName);
+
+        if (dummy == null)
         {
-            var ply = FindDummyByName(args.Parameters[1]);
-            if (ply == null)
-            {
-                args.Player.SendErrorMessage("目标假人不存在!");
-                return;
-            }
-            ply.StopMoving();
-            args.Player.SendSuccessMessage($"假人[{args.Parameters[1]}] 停止移动");
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
         }
-        else
-        {
-            args.Player.SendErrorMessage("请输入正确的名称!");
-        }
+
+        dummy.StopMoving();
+        args.Player.SendSuccessMessage($"假人 '{dummyName}' 已停止移动");
     }
 
     private static void Jump(CommandArgs args)
     {
         if (args.Parameters.Count < 2)
         {
-            args.Player.SendErrorMessage("用法: /fdummy jump <假人名称>");
+            args.Player.SendErrorMessage("用法: /dummy jump <假人名称>");
             return;
         }
 
         string dummyName = args.Parameters[1];
         var dummy = FindDummyByName(dummyName);
-        
-        if (dummy != null)
-        {
-            dummy.Jump();
-            args.Player.SendSuccessMessage($"假人 '{dummyName}' 跳跃");
-        }
-        else
+
+        if (dummy == null)
         {
             args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
         }
+
+        dummy.Jump();
+        args.Player.SendSuccessMessage($"假人 '{dummyName}' 执行跳跃");
+    }
+
+    /// <summary>
+    /// 将假人传送到指定玩家身边
+    /// 用法: /dummy tp [假人名] [玩家名]
+    /// </summary>
+    private static void TeleportDummyToPlayer(CommandArgs args)
+    {
+        if (args.Parameters.Count < 3)
+        {
+            args.Player.SendErrorMessage("用法: /dummy tp [假人名] [玩家名]");
+            return;
+        }
+        string dummyName = args.Parameters[1];
+        string playerName = args.Parameters[2];
+        var dummy = FindDummyByName(dummyName);
+        var target = TShockAPI.TSPlayer.FindByNameOrID(playerName).FirstOrDefault();
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+        if (target == null || !target.Active)
+        {
+            args.Player.SendErrorMessage($"玩家 '{playerName}' 不在线");
+            return;
+        }
+        // 取玩家服务器坐标（像素）
+        float x = target.X;
+        float y = target.Y;
+        dummy.TeleportTo(x, y);
+        args.Player.SendSuccessMessage($"假人 '{dummyName}' 已传送到玩家 '{target.Name}' 的位置 ({x:F1}, {y:F1})");
     }
 
     /// <summary>

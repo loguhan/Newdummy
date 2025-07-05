@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pl8NXX7UuAc=",
+  "dgSpecHash": "fY3BndVQSs0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\RiderProjects\\Fplayer\\Fplayer\\Fplayer.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\dummy\\Fplayer\\Fplayer.csproj",
   "expectedPackageFiles": [
     "E:\\NuGet\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "E:\\NuGet\\packages\\gettext.net\\1.7.14\\gettext.net.1.7.14.nupkg.sha512",
