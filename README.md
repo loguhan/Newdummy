@@ -4,19 +4,6 @@
 
 ---
 
-## 目录
-- [功能特性](#功能特性)
-- [安装](#安装)
-- [命令说明](#命令说明)
-- [技术特性](#技术特性)
-- [配置文件与备份](#配置文件与备份)
-- [常见问题](#常见问题)
-- [开发信息](#开发信息)
-- [更新日志](#更新日志)
-- [许可证](#许可证)
-
----
-
 ## 功能特性
 
 - ✅ 创建和管理dummy玩家
@@ -141,8 +128,6 @@
 ### 持续移动系统
 - **持续移动**: 使用 `/dummy startmove` 开始，`/dummy stopmove` 停止
 - **实时物理更新**: 60ms间隔流畅移动
-- **智能跳跃**: 跳跃时间限制0.3秒，防止过长跳跃
-- **重力系统**: 自动应用重力，移动更自然
 
 ### 位置跟踪系统
 - dummy玩家维护自己的位置信息
@@ -162,40 +147,6 @@
 
 插件会在 `tshock` 文件夹下创建 `fplayer.json` 配置文件。
 
-### 自动备份脚本
-
-可用PowerShell脚本自动备份配置文件：
-
-```powershell
-# 创建备份脚本
-$backupScript = @"
-# 创建备份文件夹
-`$backupFolder = [Environment]::GetFolderPath('Desktop') + '\FplayerBackups'
-if (!(Test-Path `$backupFolder)) {
-    New-Item -ItemType Directory -Path `$backupFolder
-}
-
-# 复制配置文件
-`$sourceFile = 'tshock\fplayer.json'
-`$timestamp = Get-Date -Format 'yyyy-MM-dd_HH-mm-ss'
-`$backupFile = `$backupFolder + '\fplayer_' + `$timestamp + '.json'
-
-if (Test-Path `$sourceFile) {
-    Copy-Item `$sourceFile `$backupFile
-    Write-Host "配置文件已备份到: `$backupFile"
-} else {
-    Write-Host "配置文件不存在: `$sourceFile"
-}
-"@
-
-$backupScript | Out-File -FilePath "backup_fplayer.ps1" -Encoding UTF8
-```
-
-运行备份脚本：
-```powershell
-.\backup_fplayer.ps1
-```
-
 ---
 
 ## 常见问题
@@ -212,14 +163,6 @@ $backupScript | Out-File -FilePath "backup_fplayer.ps1" -Encoding UTF8
   - A: `tshock/fplayer.json`，首次运行插件时自动创建。
 
 ---
-
-## 开发信息
-
-- **框架**: .NET 6.0
-- **TShock版本**: 5.0+
-- **Terraria版本**: 1.4.4.9
-- **协议**: TrProtocol
-
 ---
 
 ## 更新日志
@@ -230,7 +173,7 @@ $backupScript | Out-File -FilePath "backup_fplayer.ps1" -Encoding UTF8
 - ✅ 增强dummy列表显示，包含位置信息
 - ✅ 添加FindDummyByName辅助方法
 - ✅ 改进错误提示信息
-
+- 
 ### v2.1.0
 - ✅ 添加持续移动系统
 - ✅ 实现智能物理系统（重力、跳跃时间控制）
