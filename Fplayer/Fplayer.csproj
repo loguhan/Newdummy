@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <NuGetAuditSuppress Include="https://github.com/advisories/GHSA-6qmf-mmc7-6c2p" />
+        <PackageReference Include="TShock" Version="5.2.1">
+            <ExcludeAssets>contentFiles</ExcludeAssets>
+        </PackageReference>
+        <PackageReference Include="TrProtocol" Version="0.1.0-alpha1" />
+    </ItemGroup>
+
+</Project>
