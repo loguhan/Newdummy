@@ -1,0 +1,520 @@
+TapTap 国服可用指令6.0
+更新日期：2024年8月25日
+整理：羽学 qq1242509682
+
+注意：你用指令添加warp传送点在关房后下次登录会消失，原因是国服采用tshock模版开服，
+每次重新开房相当于重新换了一个初始配置帮你开设，
+你在游戏里给别人的权限也会随之消失需要重新再给。
+他不能保存你对服务器的任何修改工作，但对地图出生点修改除外，
+如：设置出生点 /setspawn 该指令教学最底下有指令小技巧
+
+6.0更新日志
+补充词缀ID
+修正召唤NPCID
+
+5.0更新日志：
+传送到NPC
+召唤沙尘暴、星星夜
+离线封禁玩家
+设置服务器密码
+更改RPG四职业聊天前缀与颜色指令
+补全普通玩家所有基础权限
+--------------------------------------------
+
+《游客权限（default）》可用指令
+
+/me 文字 ——使用第三人称说话，无视屏蔽词
+/who ——查看在线玩家
+/who -i ——查看所有在线玩家的序号
+/tp 玩家名字——传送到指定玩家（也可以使用who -i通过排序，使用/tp 0传送到房主）
+/spawn ——回到出生点
+/home ——回到床
+/warp add 名字 ——将自己当前位置设置为传送点
+/warp 名字 ——传送到传送点
+/warp list ——查看传送点列表
+/warp del 名字 ——删除传送点
+
+《TapTap补全普通玩家所有基础权限》（每次刚建房间都要发一次）
+/group addperm default tshock.warp tshock.whisper tshock.account.changepassword tshock.account.logout tshock.world.paint tshock.world.modify tshock.world.movenpc tshock.world.toggleparty tshock.world.time.usesundial tshock.npc.summonboss tshock.npc.startinvasion tshock.npc.startdd2 tshock.npc.spawnpets tshock.npc.hurttown tshock.tp.rod tshock.tp.wormhole tshock.tp.pylon tshock.tp.tppotion tshock.tp.magicconch tshock.tp.demonconch tshock.ignore.removetile tshock.ignore.liquid tshock.ignore.noclip tshock.ignore.paint tshock.ignore.placetile tshock.ignore.projectile tshock.ignore.damage tshock.admin.seeplayerids tshock.admin.warp tshock.tp.spawn tshock.tp.home tshock.world.time.bloodmoon tshock.npc.clearanglerquests tshock.npc.invade tshock.world.growevil tshock.world.rain tshock.world.sandstorm tshock.world.converthardmode tshock.tp.block tshock.world.time.set
+
+以上权限涵盖：
+查看所有玩家索引：/who -i
+回出生点：/spawn
+回床：/home
+传送指定玩家：/tp
+拉指定玩家：/tphere
+传送NPC：/tpnpc
+传送坐标点：/tppos
+阻止其他人传送到您的位置：/tpallow
+使用地标传送：/warp
+列出所有地标：/warp list
+添加地标传送：/warp add
+删除地标：/warp del
+修改晚上：/time 19:30
+修改白天：/time 6:00
+开启关闭下雨：/worldevent rain
+开启关闭沙尘暴：/worldevent sandstorm
+清理玩家渔夫任务完成状态：/clearangler
+召唤撒旦军团
+开启派对事件
+放置方块/液体
+使用恶魔海螺/魔法海螺/虫洞药水/传送药水
+使用油漆、释放弹幕、攻击伤害、破坏方块、放置液体不受数量与规模限制
+伤害/分配城镇NPC住房
+使用物品开启入侵/召唤血月/日食/城镇宠物/雪人军团/boss
+使用附魔日冕、月冕
+转换/种植神圣和邪恶的生物群落
+
+--------------------------------------------
+国服公开房防炸图筛选开荒玩家6步曲：
+
+1.给自己所有权限：/group addperm owner * 
+2.禁止建筑（游客模式）：/antibuild
+3.给游客分配1天开荒权限：/tempgroup 玩家名字 owner 1d
+4.设置owner组的聊天前缀为“开荒”：
+/group prefix owner [i:3454][c/FEA550:开][c/878AE5:荒][i:3455] 
+5.修改owner组的聊天颜色为“铜黄色”：
+/group color owner 193,223,186
+6.修改default组的聊天前缀为“游客”：
+/group prefix default [i:3453][c/00FFFF:游客][i:3453]
+
+注意：分配了owner临时组权限后，房间不会因为房主退出游戏而关闭，
+而是直到最后一个owner组成员退出才会出现关房倒计时，想退出可使用/off指令
+而每一个owner组成员退出游戏都会自动保存一次地图，这个过程会很缓慢。
+重进后的玩家需要重新再给owner权限
+
+备用指令：
+屠杀所有敌对NPC包括BOSS：/butcher
+清全图掉落物：/clear i 9999
+清全图弹幕：/clear p 9999
+清理所有NPC：/clear n 9999（BOSS不掉宝藏袋）
+--------------------------------------------
+《4职业开荒聊天前缀必备》：
+/group addperm owner * ——给自己所有权限
+房主不要乱改自己权限组，否则会丢失房主权限
+
+以下建组方法不适用于房主本人使用：
+
+新建一个战士组：/group add 战士
+战士组继承default所有权限：/group parent 战士 default
+战士组的聊天前缀为桃红色：/group prefix 战士 [i:3454][c/F7686D:战士][i:3454]
+将玩家分配到战士组：/tempgroup 玩家名字 战士 1d
+
+新建一个法师组：/group add 法师
+法师组继承default所有权限：/group parent 法师 default
+法师组的聊天前缀为蓝色：/group prefix 法师 [i:3455][c/5D97DD:法师][i:3455]
+将玩家分配到法师组：/tempgroup 玩家名字 法师 1d
+
+新建一个射手组：/group add 射手
+射手组继承default所有权限：/group parent 射手 default
+射手组的聊天前缀为黄色：/group prefix 射手 [i:3453][c/FAF769:射手][i:3453] 
+将玩家分配到射手组：/tempgroup 玩家名字 射手 1d
+
+新建一个召唤组：/group add 召唤
+召唤组继承default所有权限：/group parent 召唤 default
+召唤组的聊天前缀为青色：/group prefix 召唤 [i:3454][c/96FFD2:召唤][i:3454]
+将玩家分配到召唤组：/tempgroup 玩家名字 召唤 1d
+
+房主自己则用：
+/group prefix owner [i:3454][c/FEA550:房][c/878AE5:主][i:3455] 
+/group color owner 193,223,186
+可以把代码里的“房主”2个字改为四职业之一
+--------------------------------------------
+
+《房主权限（owner）》可用指令
+
+/bc 文字 ——用服务器广播说话
+/save ——保存地图
+/off-nosave ——退出并不保存地图（防炸图，回到刚建房的地图状态）
+/hardmode ——困难模式开关
+/reload ——重载服务器插件
+/protectspawn ——出生点保护开关
+/setspawn ——设置出生点（被炸过的地图不要乱用）
+/antibuild ——禁止建筑（游客模式，房外不会显示游客模式）
+/setdungeon ——设置地牢地表位置
+/serverpassword 数字 ——设置服务器密码
+/worldmode 2 ——更改世界难度（0是普通，1是专家，2是大师，3是旅途）
+/worldinfo ——查看世界信息（可以看见种子号）
+/maxplayers 数量——设置服务器最大人数（taptap把它删了）
+
+--------------------------------------------
+/god ——开启自己无敌
+/god 玩家名字 ——给玩家无敌
+/i 物品id ——给自己指定物品（天顶剑是4956）
+/g 物品id 玩家名字 ——给玩家指定物品（格式也可以是：物品id 玩家名字 数量 词缀）
+/heal 玩家名字 ——治疗玩家
+/respawn ——复活，后面加个名字可以复活玩家
+/kill 玩家名字 ——杀死玩家（针对10耐力、6围巾玩家）
+/kick 玩家名字 ——踢出玩家
+/mute 玩家名字 ——禁言玩家
+/ban add 玩家名字 ——封禁玩家
+/ban add 玩家名字 -e ——离线封禁指定玩家（即便退出房间了也会被封）
+/clearangler ——清除玩家渔夫任务完成状态
+--------------------------------------------
+/tp 玩家名字 ——传送到指定玩家
+tp * 玩家名称 ——把所有人传送到指定玩家身边
+/tphere 玩家名字 ——拉玩家到自己身边
+/tphere * ——拉所有人到自己身边
+/tpnpc NPC名字 ——传送到指定NPC身边（国服NPC名字是英文第一个字母）
+/pos ——获取当前坐标
+/tppos xxxx xxxx——传送到指定坐标
+/tpallow ——阻止其他人传送到你的位置
+--------------------------------------------
+/warp add 名字 ——添加传送点
+/warp 名字 ——传送到这个传送点
+/warp del 名字 ——删除这个传送点
+/warp seed 玩家名字 地点名字 ——把玩家发送到指定传送点,用*就是所有人
+--------------------------------------------
+/time 19:30 ——将时间调到晚上（也可以用day,noon,night）
+/settle ——强制液体停止流动
+/wind 数字 ——修改风速
+/clear item 9999 ——清全图掉落物
+/clear projectile 9999 ——清全图弹幕
+--------------------------------------------
+/butcher ——清除所有非城镇NPC生物(含BOSS)
+/clear npc 9999 ——清除全图范围包括城镇NPC在内所有生物
+/maxspawns 10 ——提高刷怪率数量为10（默认5/0不刷怪/最大200）
+/spawnrate 1 ——刷怪间隔设置1秒（默认是600毫秒，想增压可设置10-20毫秒）
+以上两项分别用200和1毫秒可以实现40倍刷怪开荒
+而用0和99999可以实现世界不再刷怪，特别适合在建刷怪场、肉山平台、
+世花养殖场、天顶种子搭建猪鲨平台时使用。
+--------------------------------------------
+/SM 生物ID ——召唤BOSS,NPC
+
+《NPC》
+17 商人
+18 护士
+19 军火商
+20 树妖
+22 向导
+37 地牢老人
+38 爆破专家
+54 服装商
+107 哥布林工匠
+108 巫师
+160 松露人
+207 染料商
+208 派对女孩
+209 机械侠
+227 油漆工
+228 巫医
+229 海盗
+352 发型师
+368 旅商
+369 渔夫
+441 税收官
+453 骷髅商人
+550 酒馆老板
+588 高尔夫球手
+633 动物学家
+663 公主
+37 老人
+678-684 所有城镇史莱姆
+
+《BOSS》
+4 克苏鲁之眼
+50 史莱姆王
+13 14 15 世界吞噬怪
+266 克苏鲁之脑
+222 蜂王
+35 骷髅王
+68 地牢守卫
+668 独眼巨鹿
+113 血肉墙
+549 撒旦传送门
+491 荷兰飞盗船
+657 史莱姆皇后
+125 激光眼
+126 魔焰眼
+134 135 136 毁灭者
+127 机械骷髅王
+1020 奥库瑞姆
+262 世纪之花
+325 哀木
+327 南瓜王
+636 光之女皇
+345 冰雪女王
+370 猪龙鱼公爵
+245 石巨人
+395 火星飞碟
+551 双足翼龙
+439 440 拜月教邪教徒
+517 日耀柱
+507 星云柱
+493 星尘柱
+422 星旋柱
+398 月亮领主
+564 T2黑暗魔法师
+565 T3黑暗魔法师
+576 T2食人魔
+577 T3食人魔
+
+《有用掉落物的精英怪》
+620 血浆哥布林鲨鱼
+621 622 623 血鳗鱼
+629 冰雪宝箱怪
+341 礼物宝箱怪
+473 腐化宝箱怪
+474 猩红宝箱怪
+475 神圣宝箱怪
+476 丛林宝箱怪
+471 哥布林术士
+618 恐惧鹦鹉螺
+243 冰雪巨人
+216 海盗船长
+346 圣诞坦克
+290 圣骑士
+541 沙尘精
+664 火把神
+85 宝箱怪
+477 飞蛾
+109 小丑
+
+《有用掉落物的小怪》
+155 狼
+48 鸟妖
+82 幻灵
+75 妖精
+87 飞龙
+463 钉头
+104 狼人
+86 独角兽
+467 致命球
+159 吸血鬼
+238 黑隐士
+461 水月怪
+101 爬藤怪
+185 小雪怪
+66 巫毒恶魔
+44 不死矿工
+480 蛇发女妖
+157 巨骨舌鱼
+176 苔藓黄蜂
+198 丛林蜥蜴
+288 地牢幽魂
+153 巨型陆龟
+154 冰雪陆龟
+71 地牢史莱姆
+79 暗黑木乃伊
+80 光明木乃伊
+81 腐化史莱姆
+287 地牢李小龙
+291 骷髅狙击手
+293 骷髅突击手
+182 恶心浮游怪
+73 哥布林侦察兵
+
+《奇奇怪怪的生物》
+65 鲨鱼
+624 侏儒
+375 松露虫
+655 岩浆蜗牛
+661 七彩草蛉
+442 金鸟
+443 金兔
+539 金松鼠
+444 金蝴蝶
+445 金蛙
+446 金蚱蜢
+605 金瓢虫
+627 金海马
+601 金蜻蜓
+613 金水黾
+447 金老鼠
+448 金蠕虫
+667 金史莱姆
+--------------------------------------------
+/invade ——开启事件无限入侵
+/worldevent meteor ——召唤陨石
+/worldevent rain ——下雨
+/worldevent rain slime ——史莱姆雨
+/worldevent fullmoon ——满月
+/worldevent eclipse ——日食
+/worldevent bloodmoon  ——血月
+/worldevent lanternsnight ——星星夜
+/worldevent sandstorm ——沙尘暴
+/forcehalloween ——万圣节
+/forcexmas ——圣诞节
+/worldevent invasion frostmoon ——霜月
+/worldevent invasion pumpkinmoon ——南瓜月
+/worldevent invasion goblins ——哥布林入侵
+/worldevent invasion snowmen ——雪人军团
+/worldevent invasion pirates——海盗入侵
+/worldevent invasion martians ——外星人入侵
+
+注意：入侵事件正在发生时使用对应的召唤指令就是结束入侵
+日食可调/time night 结束，血月、南瓜月、霜月可用/time day 结束。
+--------------------------------------------
+《领地保护》可以禁止玩家破坏修改创造这个区域
+/region set 1 ——用锤或镐敲击需要圈的左上角
+/region set 2 ——用锤或镐敲击需要圈的右下角
+/region clear ——清除选择的临时点
+/region define 领地名字 ——确认所圈范围为领地
+/region delete 领地名字 ——删除领地
+/region name 领地名字——显示领地名
+/region rename 领地名字 新名字——领地改名
+/region allow 玩家名字 领地名字——分享领地给玩家
+/region remove 玩家名称 领地名称 ——取消分享该玩家领地权
+/region list ——显示所有领地
+/region info 领地名称 ——显示领地信息
+/region protect 领地名称  true/false ——启用或关闭这个领地
+
+--------------------------------------------
+《权限分配》
+/ui 玩家名字 ——查看玩家权限组
+/group list ——查看所有组
+/group addperm default * ——给玩家所有权限（含有作弊类指令）
+/group addperm default 权限名 ——给玩家指定权限
+/group delperm default 权限名 ——删玩家指定权限
+
+《所有权限名》
+tshock.admin.antibuild——允许您切换禁止建筑模式，指令：/antibuild
+tshock.admin.ban——允许您ban人，指令：/ban
+tshock.admin.broadcast——允许您发送服务器广播，指令：/broadcast /bc /say
+tshock.admin.noban——防止您被ban
+tshock.admin.nokick——防止您被踢
+tshock.admin.kick——允许您踢掉其他玩家，指令：/kick
+tshock.admin.viewlogs——允许您接收到特定的日志消息，指令：/displaylogs
+tshock.admin.group——允许您管理用户组，指令：/group
+tshock.admin.tempgroup——允许您暂时修改玩家的用户组，指令：/tempgroup
+tshock.admin.itemban——允许您管理封禁物品，指令：/itemban
+tshock.admin.projectileban——允许您管理封禁弹幕，指令：/projban
+tshock.admin.region——允许您管理领地，指令：/region
+tshock.admin.tileban——允许您管理封禁物块，指令：/tileban
+tshock.admin.warp——允许您管理传送点，指令：/warp
+tshock.admin.mute——允许您禁言和解禁其他玩家，指令：/mute /unmute
+tshock.admin.savessi——允许您上传所有玩家的人物数据到数据库，指令：/savessc
+tshock.admin.seeplayerids——允许您查看在线玩家的ID通过/who
+tshock.admin.userinfo——允许您获取其他用户的信息，指令：/userinfo /ui
+tshock.annoy——允许您使用一些捉弄其他人的指令，指令：/annoy /rocket /firework
+tshock.world.time.bloodmoon——允许您使用物品开启血月
+tshock.world.modify——允许您修改世界
+tshock.world.paint——允许您使用油漆
+tshock.world.converthardmode——让您可以转换邪恶神圣
+tshock.world.time.dropmeteor——让您可以召唤陨石
+tshock.world.setdungeon——允许您设置地牢位置，指令：/setdungeon
+tshock.world.time.eclipse——允许您使用物品开启日食
+tshock.world.editregion——允许您编辑领地
+tshock.world.editspawn——允许您开关世界出生点保护，指令：/protectspawn
+tshock.world.time.fullmoon——允许您开启满月
+tshock.world.grow——允许您生成植物，指令：/grow
+tshock.world.growevil——允许您种植邪恶的生物群落植物
+tshock.world.sethalloween——允许您开启万圣节模式，指令：/forcehalloween
+tshock.world.hardmode——允许您更改肉前肉后，指令：/hardmode
+tshock.world.events.bloodmoon——允许您使用/WorldEvent命令的bloodmoon子命令
+tshock.world.events.eclipse——允许您使用/WorldEvent命令的eclipse子命令
+tshock.world.events.fullmoon——允许您使用/WorldEvent命令的fullmoon子命令
+tshock.world.events.invasion——允许您使用/WorldEvent命令的invasion子命令
+tshock.world.events.lanternsnight——允许您使用/WorldEvent命令的lanternsnight子命令
+tshock.world.events.meteor——允许您使用/WorldEvent命令的meteor子命令
+tshock.world.events.rain——允许您使用/WorldEvent命令的rain子命令
+tshock.world.events.sandstorm——允许您使用/WorldEvent命令的sandstorm子命令
+tshock.world.events——允许您使用/worldevent指令
+tshock.world.movenpc——允许您移动NPC房屋
+tshock.world.rain——允许您可以开启或关闭下雨
+tshock.world.sandstorm——允许您打开或关闭沙尘暴
+tshock.world.time.set——允许您使用指令修改时间
+tshock.world.toggleexpert——允许您修改世界难度，指令：/worldmode
+tshock.world.toggleparty——允许您开启派对事件
+tshock.world.time.usesundial——允许您使用附魔日冕
+tshock.world.wind——允许您修改风速，指令：/wind
+tshock.world.info——允许您查看世界信息，指令：/worldinfo
+tshock.world.save——允许您使用指令保存世界，指令：/save
+tshock.world.settleliquids——允许您使用指令平衡液体，指令：/settle
+tshock.world.setspawn——允许您修改世界出生点，指令：/setspawn
+tshock.world.setxmas——允许您开启圣诞节模式，指令：/forcexmas
+tshock.buff.self——允许您给自己buff，指令：/buff
+tshock.buff.others——允许您给其他人buff，指令：/gbuff
+tshock.npc.butcher——允许您屠杀所有NPC，指令：/butcher
+tshock.npc.clearanglerquests——允许您清除完成当天渔夫任务的玩家列表，指令：/clearangler
+tshock.npc.hurttown——允许您伤害城镇NPC
+tshock.npc.invade——允许您使用物品开启入侵
+tshock.npc.maxspawns——允许您设置一波刷怪的最大生成，指令：/maxspawns
+tshock.npc.rename——允许您给NPC重命名，指令：/renamenpc
+tshock.npc.spawnboss——允许您使用指令召唤boss，指令：/spawnboss
+tshock.npc.spawnmob——允许您通过指令召唤NPC，指令：/spawnmob
+tshock.npc.spawnpets——允许您使用物品召唤城镇宠物
+tshock.npc.spawnrate——允许您修改刷怪间隔，指令：/spawnrate
+tshock.npc.startdd2——允许您使用物品开启撒旦军团入侵
+tshock.npc.startinvasion——允许您使用物品召唤雪人军团
+tshock.npc.summonboss——允许您使用物品召唤boss
+tshock.account.changepassword——允许您可以更改自己账户的密码，指令：/password
+tshock.canchat——允许您聊天
+tshock.account.login——允许您登录游戏，指令：/login
+tshock.account.logout——允许您退出登录，指令：/logout
+tshock.account.register——允许您注册账户，指令：/register
+tshock.accountinfo.check——允许您查看已注册用户的信息，指令：/accountinfo /ai
+tshock.partychat——允许您使用队内聊天，指令：/party /p
+tshock.thirdperson——用户可以通过第三人称的方式交流，指令：/me
+tshock.projectiles.usebanned——允许您发射被封禁的弹幕
+tshock.tiles.usebanned——允许您放置被封禁的物块
+tshock.cfg.password——允许您编辑服务器密码，指令：/serverpassword
+tshock.cfg.reload——允许您重载配置文件，指令：/reload
+tshock.cfg.whitelist——允许您管理白名单，指令：/whitelist
+tshock.cfg.maintenance——当有可用更新时，通知用户，用户可以关闭重新启动服务器，指令：/checkupdates /off /exit /stop /off-nosave /exit-nosave /stop-nosave /version
+tshock.cfg.createdumps——让您可以创建Terraria ID的参考文件和Tshock帮助文档，指令：/dump-reference-data
+tshock.tp.demonconch——让您可以使用恶魔海螺
+tshock.tp.magicconch——允许您使用魔法海螺
+tshock.tp.wormhole——允许您使用虫洞药水
+tshock.tp.tppotion——允许您使用传送药水
+tshock.tp.getpos——允许您获取玩家的坐标，指令：/pos
+tshock.tp.pylon——允许您使用晶塔传送
+tshock.tp.rod——允许您使用混沌钩
+tshock.tp.spawn——允许您通过/spawn返回世界出生点，指令：/spawn
+tshock.tp.self——允许您传送到其他玩家，指令：/tp
+tshock.tp.allothers——允许您传送所有人
+tshock.tp.block——允许您阻止其他人传送到您的位置，指令：/tpallow
+tshock.tp.npc——允许您传送到NPC，指令：/tpnpc
+tshock.tp.others——允许您将其他玩家传送至您，指令：/tphere
+tshock.tp.override——允许您忽略传送限制传送至其他人
+tshock.tp.pos——允许您传送到指定位置，指令：/tppos
+tshock.tp.silent——允许您传送至别人并且不显示传送通知
+tshock.tp.home——允许您使用指令回到自己的出生点，指令：/home
+tshock.item.give——允许您给其他玩家物品，指令：/give /g
+tshock.item.spawn——允许您给自己物品，指令：/item /i
+tshock.item.usebanned——允许您使用被封禁的物品
+tshock.godmode——允许您给自己开启上帝模式，指令：/godmode /god
+tshock.godmode.other——允许您给其他玩家开启上帝模式，指令：/godmode /god
+tshock.heal——允许您治疗玩家，指令：/heal
+tshock.journey.biomespreadfreeze——允许您使用旅途作弊菜单开关环境蔓延
+tshock.journey.research——允许您使用旅途研究
+tshock.journey.godmode——允许您使用旅途作弊菜单开启上帝模式
+tshock.journey.placementrange——允许您使用旅途作弊菜单开启更远的放置距离
+tshock.journey.rain.freeze——允许您通过使用旅途作弊菜单锁定雨天
+tshock.journey.rain.strength——允许您通过使用旅途作弊菜单修改雨天
+tshock.journey.setdifficulty——允许您通过使用旅途作弊菜单修改难度
+tshock.journey.setspawnrate——允许您通过使用旅途作弊菜单修改刷怪率
+tshock.journey.time.freeze——允许您通过使用旅途作弊菜单冻结时间
+tshock.journey.time.set——允许您通过使用旅途作弊菜单修改时间
+tshock.journey.time.setspeed——允许您通过使用旅途作弊菜单修改时间流速
+tshock.journey.wind.freeze——允许您通过使用旅途作弊菜单锁定风速
+tshock.journey.wind.strength——允许您通过使用旅途作弊菜单修改风速
+tshock.kill——允许您通过指令对其他玩家造成伤害，指令：/kill /slay
+tshock.clear——允许您清除弹幕，物品或NPC，指令：/clear
+tshock.reservedslot——允许您绕过最大配饰格检测
+tshock.respawn——允许您使用指令复活自己，指令：/respawn
+tshock.respawn.other——允许您使用指令复活其他玩家，指令：/respawn
+tshock.sendemoji——允许您发送表情
+tshock.info——允许您查看服务器信息，指令：/serverinfo
+tshock.slap——允许您使用指令对别人造成伤害，指令：/slap
+tshock.su——允许您给自己十分钟的超管权限，指令：/su /sudo
+tshock.synclocalarea——允许您使用指令重新同步服务器状态，指令：/sync
+tshock.ssc.upload——允许您上传自己的人物数据，指令：/uploadssc
+tshock.ssc.upload.others——允许您上传其他人的人物数据，指令：/uploadssc
+tshock.superadmin.user——允许您使用/user指令，指令：/user
+tshock.warp——允许您传送至传送点，指令：/warp
+tshock.whisper——允许您使用指令私聊，指令：/reply /r /whisper /w /tell /pm /dm /wallow
+
+--------------------------------------------
+《常用词缀ID》
+15轻 
+28精湛 
+48迟钝 
+57无情 
+65护佑 
+72险恶 
+80暴力 
+81传奇 
+82虚幻 
+83神话
+84传奇（悠悠球、链球）

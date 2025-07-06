@@ -31,7 +31,15 @@ internal class CommandAdapter
         { "startmove", StartMove },
         { "stopmove", StopMove },
         { "jump", Jump },
-        { "tp", TeleportDummyToPlayer }
+        { "tp", TeleportDummyToPlayer },
+        { "stool", TogglePortableStool },
+        { "pulley", CheckPulleyStatus },
+        { "movement", CheckMovementStatus },
+        { "gravity", CheckGravityStatus },
+        { "collision", CheckCollisionStatus },
+        { "special", CheckSpecialMovementStatus },
+        { "climb", CheckClimbStatus },
+        { "ground", CheckGroundStatus }
     };
 
     public static void Adapter(CommandArgs args)
@@ -52,6 +60,15 @@ internal class CommandAdapter
         args.Player.SendInfoMessage("dummy startmove [name] [left|right] 开始持续移动");
         args.Player.SendInfoMessage("dummy stopmove [name] 停止移动");
         args.Player.SendInfoMessage("dummy jump [name] 跳跃");
+        args.Player.SendInfoMessage("dummy tp [name] [player] 传送假人到玩家位置");
+        args.Player.SendInfoMessage("dummy stool [name] [on|off] 设置便携式凳子状态");
+        args.Player.SendInfoMessage("dummy pulley [name] 查看滑轮状态");
+        args.Player.SendInfoMessage("dummy movement [name] 查看移动状态");
+        args.Player.SendInfoMessage("dummy gravity [name] 查看重力状态");
+        args.Player.SendInfoMessage("dummy collision [name] 查看碰撞状态");
+        args.Player.SendInfoMessage("dummy special [name] 查看特殊移动状态");
+        args.Player.SendInfoMessage("dummy climb [name] 查看上坡状态");
+        args.Player.SendInfoMessage("dummy ground [name] 查看地面坐标状态");
     }
 
     private static void ReConnect(CommandArgs args)
@@ -150,14 +167,16 @@ internal class CommandAdapter
             int spawnX = Main.spawnTileX;
             int spawnY = Main.spawnTileY;
             
-            // 转换为像素坐标
-            initialPosition = new Vector2(spawnX * 16f, spawnY * 16f);
+            // 转换为像素坐标，考虑玩家高度（48像素）
+            // 让假人站在地面上，而不是悬浮在空中
+            float playerHeight = 48f;
+            initialPosition = new Vector2(spawnX * 16f, spawnY * 16f - playerHeight);
             
         }
         catch
         {
             // 如果获取出生点失败，使用默认位置
-            initialPosition = new Vector2(100 * 16f, 100 * 16f);
+            initialPosition = new Vector2(100 * 16f, 100 * 16f - 48f);
         }
 
         // 创建假人
@@ -262,24 +281,24 @@ internal class CommandAdapter
         var dummy = FindDummyByName(dummyName);
 
         if (dummy == null)
-        {
+            {
             args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
-            return;
-        }
+                return;
+            }
 
-        switch (direction)
-        {
-            case "left":
+            switch (direction)
+            {
+                case "left":
                 dummy.StartMovingLeft();
                 args.Player.SendSuccessMessage($"假人 '{dummyName}' 开始持续向左移动");
-                break;
-            case "right":
+                    break;
+                case "right":
                 dummy.StartMovingRight();
                 args.Player.SendSuccessMessage($"假人 '{dummyName}' 开始持续向右移动");
-                break;
-            default:
+                    break;
+                default:
                 args.Player.SendErrorMessage("方向参数错误，请使用 left 或 right");
-                break;
+                    break;
         }
     }
 
@@ -295,10 +314,10 @@ internal class CommandAdapter
         var dummy = FindDummyByName(dummyName);
 
         if (dummy == null)
-        {
+            {
             args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
-            return;
-        }
+                return;
+            }
 
         dummy.StopMoving();
         args.Player.SendSuccessMessage($"假人 '{dummyName}' 已停止移动");
@@ -314,16 +333,16 @@ internal class CommandAdapter
 
         string dummyName = args.Parameters[1];
         var dummy = FindDummyByName(dummyName);
-
+        
         if (dummy == null)
         {
             args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
             return;
         }
 
-        dummy.Jump();
+            dummy.Jump();
         args.Player.SendSuccessMessage($"假人 '{dummyName}' 执行跳跃");
-    }
+        }
 
     /// <summary>
     /// 将假人传送到指定玩家身边
@@ -379,5 +398,220 @@ internal class CommandAdapter
         {
             args.Player.SendErrorMessage(result.Message);
         }
+    }
+
+    /// <summary>
+    /// 切换便携式凳子状态
+    /// </summary>
+    private static void TogglePortableStool(CommandArgs args)
+    {
+        if (args.Parameters.Count < 3)
+        {
+            args.Player.SendErrorMessage("用法: /dummy stool <假人名称> <on|off>");
+            return;
+        }
+
+        string dummyName = args.Parameters[1];
+        string stoolState = args.Parameters[2].ToLower();
+        
+        var dummy = FindDummyByName(dummyName);
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+
+        bool isUsingStool = stoolState == "on";
+        dummy.SetPortableStool(isUsingStool);
+        
+        string status = isUsingStool ? "启用" : "禁用";
+        args.Player.SendSuccessMessage($"假人 '{dummyName}' 便携式凳子已{status}");
+    }
+
+    /// <summary>
+    /// 检查滑轮状态
+    /// </summary>
+    private static void CheckPulleyStatus(CommandArgs args)
+    {
+        if (args.Parameters.Count < 2)
+        {
+            args.Player.SendErrorMessage("用法: /dummy pulley <假人名称>");
+            return;
+        }
+
+        string dummyName = args.Parameters[1];
+        var dummy = FindDummyByName(dummyName);
+        
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+
+        string pulleyStatus = dummy.GetPulleyStatus();
+        bool stoolStatus = dummy.IsUsingPortableStool();
+        
+        args.Player.SendInfoMessage($"假人 '{dummyName}' 状态:");
+        args.Player.SendInfoMessage($"- 滑轮: {pulleyStatus}");
+        args.Player.SendInfoMessage($"- 便携式凳子: {(stoolStatus ? "启用" : "禁用")}");
+        args.Player.SendInfoMessage($"- 位置: ({dummy.Position.X:F1}, {dummy.Position.Y:F1})");
+    }
+
+    /// <summary>
+    /// 检查移动状态
+    /// </summary>
+    private static void CheckMovementStatus(CommandArgs args)
+    {
+        if (args.Parameters.Count < 2)
+        {
+            args.Player.SendErrorMessage("用法: /dummy movement <假人名称>");
+            return;
+        }
+
+        string dummyName = args.Parameters[1];
+        var dummy = FindDummyByName(dummyName);
+        
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+
+        string movementStatus = dummy.GetMovementStatus();
+        
+        args.Player.SendInfoMessage($"假人 '{dummyName}' 移动状态:");
+        args.Player.SendInfoMessage($"- {movementStatus}");
+        args.Player.SendInfoMessage($"- 位置: ({dummy.Position.X:F1}, {dummy.Position.Y:F1})");
+    }
+
+
+
+    /// <summary>
+    /// 检查重力状态
+    /// </summary>
+    private static void CheckGravityStatus(CommandArgs args)
+    {
+        if (args.Parameters.Count < 2)
+        {
+            args.Player.SendErrorMessage("用法: /dummy gravity <假人名称>");
+            return;
+        }
+
+        string dummyName = args.Parameters[1];
+        var dummy = FindDummyByName(dummyName);
+        
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+
+        string gravityStatus = dummy.GetGravityStatus();
+        
+        args.Player.SendInfoMessage($"假人 '{dummyName}' 重力状态:");
+        args.Player.SendInfoMessage($"- {gravityStatus}");
+    }
+
+    /// <summary>
+    /// 检查碰撞状态
+    /// </summary>
+    private static void CheckCollisionStatus(CommandArgs args)
+    {
+        if (args.Parameters.Count < 2)
+        {
+            args.Player.SendErrorMessage("用法: /dummy collision <假人名称>");
+            return;
+        }
+
+        string dummyName = args.Parameters[1];
+        var dummy = FindDummyByName(dummyName);
+        
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+
+        args.Player.SendInfoMessage($"假人 '{dummyName}' 碰撞状态:");
+        args.Player.SendInfoMessage($"- 位置: ({dummy.Position.X:F1}, {dummy.Position.Y:F1})");
+        args.Player.SendInfoMessage($"- 速度: ({dummy.Velocity.X:F1}, {dummy.Velocity.Y:F1})");
+    }
+
+    /// <summary>
+    /// 检查特殊移动状态
+    /// </summary>
+    private static void CheckSpecialMovementStatus(CommandArgs args)
+    {
+        if (args.Parameters.Count < 2)
+        {
+            args.Player.SendErrorMessage("用法: /dummy special <假人名称>");
+            return;
+        }
+
+        string dummyName = args.Parameters[1];
+        var dummy = FindDummyByName(dummyName);
+        
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+
+        string specialStatus = dummy.GetSpecialMovementStatus();
+        
+        args.Player.SendInfoMessage($"假人 '{dummyName}' 特殊移动状态:");
+        args.Player.SendInfoMessage($"- {specialStatus}");
+    }
+
+    /// <summary>
+    /// 检查上坡状态
+    /// </summary>
+    private static void CheckClimbStatus(CommandArgs args)
+    {
+        if (args.Parameters.Count < 2)
+        {
+            args.Player.SendErrorMessage("用法: /dummy climb <假人名称>");
+            return;
+        }
+
+        string dummyName = args.Parameters[1];
+        var dummy = FindDummyByName(dummyName);
+        
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+
+        string climbStatus = dummy.GetClimbStatus();
+        
+        args.Player.SendInfoMessage($"假人 '{dummyName}' 上坡状态:");
+        args.Player.SendInfoMessage($"- {climbStatus}");
+    }
+
+    /// <summary>
+    /// 检查地面坐标状态
+    /// </summary>
+    private static void CheckGroundStatus(CommandArgs args)
+    {
+        if (args.Parameters.Count < 2)
+        {
+            args.Player.SendErrorMessage("用法: /dummy ground <假人名称>");
+            return;
+        }
+
+        string dummyName = args.Parameters[1];
+        var dummy = FindDummyByName(dummyName);
+        
+        if (dummy == null)
+        {
+            args.Player.SendErrorMessage($"假人 '{dummyName}' 不存在");
+            return;
+        }
+
+        string groundStatus = dummy.GetGroundStatus();
+        
+        args.Player.SendInfoMessage($"假人 '{dummyName}' 地面状态:");
+        args.Player.SendInfoMessage($"- {groundStatus}");
     }
 }

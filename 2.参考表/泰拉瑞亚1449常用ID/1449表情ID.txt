@@ -1,0 +1,171 @@
+常规
+ID	名称	命令	图像
+0	Emotion Love	/爱心	Emote Emotion Love.gif
+1	Emotion Anger	/愤怒	Emote Emotion Anger.gif
+2	Emotion Cry	/哭泣	Emote Emotion Cry.gif
+3	Emotion Alert	/警告	Emote Emotion Alert.gif
+15	Emote Laugh	/大笑	Emote Emote Laugh.gif
+136	Emote Happiness	/快乐	Emote Emote Happiness.gif
+94	Emote Eating	/饥饿	Emote Emote Eating.gif
+16	Emote Fear	/害怕	Emote Emote Fear.gif
+135	Emote Anger	/抓狂	Emote Emote Anger.gif
+134	Emote Sadness	/难过	Emote Emote Sadness.gif
+137	Emote Wink	/眨眼	Emote Emote Wink.gif
+138	Emote Scowl	/皱眉	Emote Emote Scowl.gif
+139	Emote Silly	/呆萌	Emote Emote Silly.gif
+17	Emote Note	/音乐	Emote Emote Note.gif
+87	Emote Confused	/困惑	Emote Emote Confused.gif
+88	Emote Kiss	/亲吻	Emote Emote Kiss.gif
+89	Emote Sleep	/睡觉	Emote Emote Sleep.gif
+91	Emote Run	/奔跑	Emote Emote Run.gif
+92	Emote Kick	/踢人	Emote Emote Kick.gif
+93	Emote Fight	/作战	Emote Emote Fight.gif
+8	Debuff Poison	/毒药	Emote Debuff Poison.gif
+9	Debuff Burn	/燃烧	Emote Debuff Burn.gif
+10	Debuff Silence	/沉默	Emote Debuff Silence.gif
+11	Debuff Curse	/诅咒	Emote Debuff Curse.gif
+14	Misc Tree	/树	Emote Misc Tree.gif
+100	Misc Fire	/火	Emote Misc Fire.gif
+146	Peckish	/稍饿	Emote Peckish.gif
+147	Hunger	/饥饿	Emote Hungry.gif
+148	Starving	/极饿	Emote Starving.gif
+
+石头、剪刀、布！
+ID	名称	命令	图像
+36	RPS Scissors	/剪刀	Emote RPS Scissors.gif
+37	RPS Rock	/石头	Emote RPS Rock.gif
+38	RPS Paper	/布	Emote RPS Paper.gif
+33	RPS Win Scissors	/剪刀赢	Emote RPS Win Scissors.gif
+34	RPS Win Rock	/石头赢	Emote RPS Win Rock.gif
+35	RPS Win Paper	/布赢	Emote RPS Win Paper.gif
+
+物品
+ID	名称	命令	图像
+7	Item Ring	/戒指	Emote Item Ring.gif
+73	Item Life Potion	/生命药水	Emote Item Life Potion.gif
+74	Item Mana Potion	/魔力药水	Emote Item Mana Potion.gif
+75	Item Soup	/汤	Emote Item Soup.gif
+76	Item Cooked Fish	/熟鱼	Emote Item Cooked Fish.gif
+131	Item Beer	/啤酒	Emote Item Beer.gif
+77	Item Ale	/麦芽酒	Emote Item Ale.gif
+78	Item Sword	/剑	Emote Item Sword.gif
+79	Item Fishing Rod	/钓竿	Emote Item Fishing Rod.gif
+80	Item Bug Net	/虫网	Emote Item Bug Net.gif
+81	Item Dynamite	/雷管	Emote Item Dynamite.gif
+82	Item Minishark	/迷你鲨	Emote Item Minishark.gif
+83	Item Cog	/齿轮	Emote Item Cog.gif
+84	Item Tombstone	/墓石	Emote Item Tombstone.gif
+85	Item Goldpile	/金币堆	Emote Item Goldpile.gif
+86	Item Diamond Ring	/钻石戒指	Emote Item Diamond Ring.gif
+90	Item Pickaxe	/镐	Emote Item Pickaxe.gif
+132	Item Defender Medal	/护卫奖章	Emote Item Defender Medal.gif
+126	Party Present	/礼物	Emote Party Present.gif
+127	Party Balloons	/气球	Emote Party Balloons.gif
+128	Party Cake	/蛋糕	Emote Party Cake.gif
+129	Party Hats	/派对帽	Emote Party Hats.gif
+149	Lucy the Axe	/露西	Emote Lucy The Axe.gif
+
+自然和天气
+ID	名称	命令	图像
+22	Biome Space	/天空	Emote Biome Sky.gif
+23	Biome Forest	/地表	Emote Biome Otherworld.gif
+24	Biome Jungle	/丛林	Emote Biome Jungle.gif
+25	Biome Crimson	/猩红	Emote Biome Crimson.gif
+26	Biome Corruption	/腐化	Emote Biome Corruption.gif
+27	Biome Hallow	/神圣	Emote Biome Hallow.gif
+28	Biome Desert	/沙漠	Emote Biome Desert.gif
+29	Biome Beach	/沙滩	Emote Biome Beach.gif
+30	Biome Underground	/岩石生物群系	Emote Biome Rocklayer.gif
+31	Biome Underworld	/熔岩生物群系	Emote Biome Lavalayer.gif
+32	Biome Snow	/雪原	Emote Biome Snow.gif
+18	Event Blood Moon	/血月	Emote Event Bloodmoon.gif
+19	Event Solar Eclipse	/日食	Emote Event Eclipse.gif
+20	Event Pumpkin Moon	/南瓜月	Emote Event Pumpkin.gif
+21	Event Frost Moon	/霜月	Emote Event Snow.gif
+99	Event Meteor	/流星	Emote Event Meteor.gif
+4	Weather Rain	/下雨	Emote Weather Rain.gif
+5	Weather Lightning	/闪电	Emote Weather Lightning.gif
+6	Weather Rainbow	/彩虹	Emote Weather Rainbow.gif
+95	Weather Sunny	/晴朗	Emote Weather Sunny.gif
+96	Weather Cloudy	/多云	Emote Weather Cloudy.gif
+97	Weather Storming	/暴风雨	Emote Weather Storming.gif
+98	Weather Blizzard	/暴雪	Emote Weather Snowstorm.gif
+
+城镇
+ID	名称	命令	图像
+101	Town Merchant	/商人	Emote Town Merchant.gif
+102	Town Nurse	/护士	Emote Town Nurse.gif
+103	Town Arms Dealer	/军火商	Emote Town Arms Dealer.gif
+104	Town Dryad	/树妖	Emote Town Dryad.gif
+105	Town Guide	/向导	Emote Town Guide.gif
+106	Town Oldman	/老人	Emote Town Oldman.gif
+107	Town Demolitionist	/爆破专家	Emote Town Demolitionist.gif
+108	Town Clothier	/服装商	Emote Town Clothier.gif
+109	Town Goblin Tinkerer	/哥布林工匠	Emote Town Goblin Tinkerer.gif
+110	Town Wizard	/巫师	Emote Town Wizard.gif
+111	Town Mechanic	/机械师	Emote Town Mechanic.gif
+112	Town Santa	/圣诞老人	Emote Town Santa.gif
+113	Town Truffle	/松露人	Emote Town Truffle.gif
+114	Town Steampunker	/蒸汽朋克人	Emote Town Steampunker.gif
+115	Town Dye Trader	/染料商	Emote Town Dye Trader.gif
+116	Town Party Girl	/派对女孩	Emote Town Party Girl.gif
+117	Town Cyborg	/机器侠	Emote Town Cyborg.gif
+118	Town Painter	/油漆工	Emote Town Painter.gif
+119	Town Witch Doctor	/巫医	Emote Town Witch Doctor.gif
+120	Town Pirate	/海盗	Emote Town Pirate.gif
+121	Town Stylist	/发型师	Emote Town Stylist.gif
+122	Town Traveling Merchant	/旅商	Emote Town Travelling Merchant.gif
+123	Town Angler	/渔夫	Emote Town Angler.gif
+124	Town Skeleton Merchant	/骷髅商人	Emote Town Skeleton Merchant.gif
+125	Town Tax Collector	/税收官	Emote Town Tax Collector.gif
+130	Town Tavernkeep	/酒馆老板	Emote Town Bartender.gif
+140	Town Golfer	/高尔夫球手	Emote Town Golfer.gif
+141	Town Zoologist	/动物学家	Emote Town Bestiary Girl.gif
+142	Town Zoologist Fox	/动物学家狐狸	Emote Town Bestiary Girl Fox.gif
+145	Town Princess	/公主	Emote Town Princess.gif
+
+小动物和怪物
+ID	名称	命令	图像	解锁条件
+12	Critter Bee	/蜜蜂	Emote Critter Bee.gif
+13	Critter Slime	/史莱姆	Emote Critter Slime.gif
+61	Critter Zombie	/僵尸	Emote Critter Zombie.gif
+62	Critter Bunny	/兔兔	Emote Critter Bunny.gif
+63	Critter Butterfly	/蝴蝶	Emote Critter Butterfly.gif
+67	Critter Spider	/蜘蛛	Emote Critter Spider.gif
+68	Critter Bird	/鸟	Emote Critter Bird.gif
+69	Critter Mouse	/老鼠	Emote Critter Mouse.gif
+70	Critter Goldfish	/金鱼	Emote Critter Goldfish.gif
+72	Critter Skeleton	/骷髅	Emote Critter Skeleton.gif
+64	Critter Goblin	/哥布林	Emote Critter Goblin.gif	哥布林军队被击败
+66	Critter Snowman	/雪人	Emote Critter Snowman.gif	霜月被击败
+65	Critter Pirate	/神射手	Emote Critter Pirate.gif	海盗入侵被击败
+71	Critter Martian	/火星人	Emote Critter Martian.gif	火星暴乱被击败
+
+危险
+ID	名称	命令	图像	解锁条件
+39	Boss Eye of Cthulhu	/克苏鲁之眼	Emote Boss EoC.gif	克苏鲁之眼被击败
+40	Boss Eater of Worlds	/世界吞噬怪	Emote Boss EoW.gif	世界吞噬怪或克苏鲁之脑被击败
+41	Boss Brain of Cthulhu	/克苏鲁之脑	Emote Boss BoC.gif	世界吞噬怪或克苏鲁之脑被击败
+51	Boss King Slime	/史莱姆王	Emote Boss King Slime.gif	史莱姆王被击败
+149	Boss Deerclops	/独眼巨鹿	Emote Boss Deerclops.gif	独眼巨鹿被击败
+42	Boss Queen Bee	/蜂王	Emote Boss Queen Bee.gif	蜂王被击败
+43	Boss Skeletron	/骷髅王	Emote Boss Skeletron.gif	骷髅王被击败
+44	Boss Wall of Flesh	/血肉墙	Emote Boss WoF.gif	血肉墙被击败
+144	Boss Queen Slime	/史莱姆皇后	Emote Boss Queen Slime.gif	史莱姆皇后被击败
+45	Boss The Destroyer	/毁灭者	Emote Boss Destroyer.gif	毁灭者被击败
+46	Boss Skeletron Prime	/机械骷髅王	Emote Boss Skeletron Prime.gif	机械骷髅王被击败
+47	Boss The Twins	/双子魔眼	Emote Boss Twins.gif	双子魔眼被击败
+48	Boss Plantera	/世纪之花	Emote Boss Plantera.gif	世纪之花被击败
+49	Boss Golem	/石巨人	Emote Boss Golem.gif	石巨人被击败
+50	Boss Duke Fishron	/猪龙鱼	Emote Boss Fishron.gif	猪龙鱼公爵被击败
+143	Boss Empress of Light	/光之女皇	Emote Boss Empress of Light.gif	光之女皇被击败
+52	Boss Lunatic Cultist	/邪教徒	Emote Boss Cultist.gif	拜月教邪教徒被击败
+53	Boss Moon Lord	/月亮领主	Emote Boss Moonmoon.gif	月亮领主被击败
+54	Boss Mourning Wood	/哀木	Emote Boss Mourning Wood.gif	哀木被击败
+55	Boss Pumpking	/南瓜王	Emote Boss Pumpking.gif	南瓜王被击败
+56	Boss Everscream	/常绿尖叫怪	Emote Boss Everscream.gif	常绿尖叫怪被击败
+57	Boss Ice Queen	/冰雪女王	Emote Boss Ice Queen.gif	冰雪女王被击败
+58	Boss Santa-NK1	/圣诞坦克	Emote Boss Santank.gif	圣诞坦克被击败
+59	Boss Flying Dutchman	/海盗船	Emote Boss Pirateship.gif	海盗入侵被击败
+60	Boss Martian Saucer	/火星飞船	Emote Boss Martianship.gif	火星飞碟被击败
+133	Event Old Ones Army	/撒旦军队	Emote Event Old Ones Army.gif	任意级别的撒旦军队被击败

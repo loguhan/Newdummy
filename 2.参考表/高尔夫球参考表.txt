@@ -1,0 +1,150 @@
+高尔夫球参考表
+================
+
+一、基础高尔夫球
+----------------
+ID: 3989
+名称: 高尔夫球
+英文名: GolfBall
+说明: 基础白色高尔夫球，贪吃蛇游戏中使用的主要物品
+
+二、彩色高尔夫球系列
+-------------------
+ID: 4258 - 黑高尔夫球 (GolfBallDyedBlack)
+ID: 4259 - 蓝高尔夫球 (GolfBallDyedBlue)
+ID: 4260 - 棕高尔夫球 (GolfBallDyedBrown)
+ID: 4261 - 青高尔夫球 (GolfBallDyedCyan)
+ID: 4262 - 绿高尔夫球 (GolfBallDyedGreen)
+ID: 4263 - 橙绿高尔夫球 (GolfBallDyedLimeGreen)
+ID: 4264 - 橙高尔夫球 (GolfBallDyedOrange)
+ID: 4265 - 粉高尔夫球 (GolfBallDyedPink)
+ID: 4266 - 紫高尔夫球 (GolfBallDyedPurple)
+ID: 4267 - 红高尔夫球 (GolfBallDyedRed)
+ID: 4268 - 天蓝高尔夫球 (GolfBallDyedSkyBlue)
+ID: 4269 - 青绿高尔夫球 (GolfBallDyedTeal)
+ID: 4270 - 蓝紫高尔夫球 (GolfBallDyedViolet)
+ID: 4271 - 黄高尔夫球 (GolfBallDyedYellow)
+
+三、高尔夫球杆系列
+-----------------
+ID: 4055 - 高尔夫球杆（铁杆） (GolfClubIron)
+ID: 4108 - 高尔夫球杆（推杆） (GolfClubPutter)
+ID: 4109 - 高尔夫球杆（挖起杆） (GolfClubWedge)
+ID: 4110 - 高尔夫球杆（木杆） (GolfClubDriver)
+
+四、破旧高尔夫球杆系列
+---------------------
+ID: 4603 - 破旧高尔夫球杆（铁杆） (GolfClubStoneIron)
+ID: 4604 - 破旧高尔夫球杆（推杆） (GolfClubRustyPutter)
+ID: 4605 - 破旧高尔夫球杆（挖起杆） (GolfClubBronzeWedge)
+ID: 4606 - 破旧高尔夫球杆（木杆） (GolfClubWoodDriver)
+
+五、精致高尔夫球杆系列
+---------------------
+ID: 4607 - 精致高尔夫球杆（铁杆） (GolfClubMythrilIron)
+ID: 4608 - 精致高尔夫球杆（推杆） (GolfClubLeadPutter)
+ID: 4609 - 精致高尔夫球杆（挖起杆） (GolfClubGoldWedge)
+ID: 4610 - 精致高尔夫球杆（木杆） (GolfClubPearlwoodDriver)
+
+六、高级高尔夫球杆系列
+---------------------
+ID: 4611 - 高级高尔夫球杆（铁杆） (GolfClubTitaniumIron)
+ID: 4612 - 高级高尔夫球杆（推杆） (GolfClubShroomitePutter)
+ID: 4613 - 高级高尔夫球杆（挖起杆） (GolfClubDiamondWedge)
+ID: 4614 - 高级高尔夫球杆（木杆） (GolfClubChlorophyteDriver)
+
+七、高尔夫球相关物品
+-------------------
+ID: 4056 - 高尔夫球洞 (GolfCup)
+ID: 4105 - 高尔夫球座 (GolfTee)
+ID: 4111 - 高尔夫口哨 (GolfWhistle)
+ID: 4280 - 高尔夫球车钥匙 (GolfCart)
+ID: 4281 - 高尔夫箱 (GolfChest)
+ID: 4282 - 机关高尔夫箱 (Fake_GolfChest)
+
+八、高尔夫球奖杯
+---------------
+ID: 4615 - 高尔夫铜奖杯 (GolfTrophyBronze)
+ID: 4616 - 高尔夫银奖杯 (GolfTrophySilver)
+ID: 4617 - 高尔夫金奖杯 (GolfTrophyGold)
+
+九、高尔夫球射弹ID
+-----------------
+射弹ID: 721 - 高尔夫球 (DirtGolfBall)
+射弹ID: 722 - 高尔夫球杆 (GolfClubHelper)
+射弹ID: 739 - 黑高尔夫球 (GolfBallDyedBlack)
+射弹ID: 740 - 蓝高尔夫球 (GolfBallDyedBlue)
+射弹ID: 741 - 棕高尔夫球 (GolfBallDyedBrown)
+射弹ID: 742 - 青高尔夫球 (GolfBallDyedCyan)
+射弹ID: 743 - 绿高尔夫球 (GolfBallDyedGreen)
+射弹ID: 744 - 橙绿高尔夫球 (GolfBallDyedLimeGreen)
+射弹ID: 745 - 橙高尔夫球 (GolfBallDyedOrange)
+射弹ID: 746 - 粉高尔夫球 (GolfBallDyedPink)
+射弹ID: 747 - 紫高尔夫球 (GolfBallDyedPurple)
+射弹ID: 748 - 红高尔夫球 (GolfBallDyedRed)
+射弹ID: 749 - 天蓝高尔夫球 (GolfBallDyedSkyBlue)
+射弹ID: 750 - 青绿高尔夫球 (GolfBallDyedTeal)
+射弹ID: 751 - 蓝紫高尔夫球 (GolfBallDyedViolet)
+射弹ID: 752 - 黄高尔夫球 (GolfBallDyedYellow)
+
+十、高尔夫球相关NPC
+-----------------
+NPC ID: 588 - 高尔夫球手 (Golfer)
+NPC ID: 589 - 高尔夫球手（救援） (GolferRescue)
+
+十一、高尔夫球相关表情
+---------------------
+表情ID: 140 - Town Golfer (高尔夫球手表情)
+
+十二、高尔夫球相关BUFF
+---------------------
+BUFF ID: 847 - 高尔夫球车
+BUFF ID: 848 - 高尔夫球车
+
+十三、高尔夫球相关图格
+---------------------
+图格ID: 476 - 高尔夫球洞
+图格ID: 494 - 高尔夫球座
+图格ID: 560 - 高尔夫铜奖杯
+图格ID: 561 - 高尔夫银奖杯
+图格ID: 562 - 高尔夫金奖杯
+
+十四、贪吃蛇游戏中的高尔夫球使用
+-----------------------------
+在贪吃蛇游戏中，我们使用基础高尔夫球 (ID: 3989) 作为蛇头的视觉标记。
+
+代码示例：
+```csharp
+// 在蛇头位置放置高尔夫球
+if (snakeGame.Snake.Count > 0)
+{
+    var (headX, headY) = snakeGame.Snake[0];
+    // 高尔夫球ID: 3989 (GolfBall)
+    WorldGen.PlaceTile(headX, headY, 3989, true, true);
+    NetMessage.SendTileSquare(-1, headX, headY, 1);
+}
+```
+
+十五、高尔夫球功能特性
+---------------------
+1. 自动生成：蛇头位置自动生成高尔夫球
+2. 实时更新：蛇移动时高尔夫球位置同步更新
+3. 视觉效果：高尔夫球使用泰拉瑞亚官方物品ID
+4. 无缝集成：与现有贪吃蛇游戏完美融合
+5. 性能优化：不影响游戏性能
+
+十六、使用注意事项
+-----------------
+1. 确保服务器版本支持高尔夫球物品ID
+2. 高尔夫球会自动跟随蛇头移动
+3. 游戏结束时高尔夫球会自动清除
+4. 高尔夫球不影响游戏逻辑和得分
+5. 可以根据需要更换不同颜色的高尔夫球
+
+十七、扩展建议
+-------------
+1. 根据得分使用不同颜色的高尔夫球
+2. 添加高尔夫球特效和声音
+3. 实现高尔夫球收集机制
+4. 将高尔夫球作为游戏障碍物
+5. 添加高尔夫球相关的成就系统 

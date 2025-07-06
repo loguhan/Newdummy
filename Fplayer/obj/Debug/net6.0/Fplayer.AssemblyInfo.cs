@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fplayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a13fdde4499ee76c7ed686bf7aa2e641f15a7ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9651dc884494f81944dd23dfd480b0edb263a351")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fplayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fplayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

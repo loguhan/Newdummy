@@ -1,0 +1,1408 @@
+
+ID	图像	名称	内部名称	类型
+1	
+黑曜石皮
+黑曜石皮
+ObsidianSkin	增益
+2	
+再生
+再生
+Regeneration	增益
+3	
+敏捷
+敏捷
+Swiftness	增益
+4	
+鱼鳃
+鱼鳃
+Gills	增益
+5	
+铁皮
+铁皮
+Ironskin	增益
+6	
+魔力再生
+魔力再生
+ManaRegeneration	增益
+7	
+魔能
+魔能
+MagicPower	增益
+8	
+羽落
+羽落
+Featherfall	增益
+9	
+洞穴探险
+洞穴探险
+Spelunker	增益
+10	
+隐身
+隐身
+Invisibility	增益
+11	
+光芒
+光芒
+Shine	增益
+12	
+夜猫子
+夜猫子
+NightOwl	增益
+13	
+战斗
+战斗
+Battle	增益
+14	
+荆棘
+荆棘
+Thorns	增益
+15	
+水上漂
+水上漂
+WaterWalking	增益
+16	
+箭术
+箭术
+Archery	增益
+17	
+猎人
+猎人
+Hunter	增益
+18	
+重力
+重力
+Gravitation	增益
+19	
+暗影珠
+暗影珠
+ShadowOrb	增益
+20	
+中毒
+中毒
+Poisoned	减益
+21	
+耐药性
+耐药性
+PotionSickness	减益
+22	
+黑暗
+黑暗
+Darkness	减益
+23	
+诅咒
+诅咒
+Cursed	减益
+24	
+着火了！
+着火了！
+OnFire	减益
+25	
+踉跄
+踉跄
+Tipsy	减益
+26	
+吃得好
+吃得好
+WellFed	增益
+27	
+仙灵
+仙灵 (蓝)
+FairyBlue	增益
+28	
+狼人
+狼人
+Werewolf	增益
+29	
+灵视
+灵视
+Clairvoyance	增益
+30	
+流血
+流血
+Bleeding	减益
+31	
+困惑
+困惑
+Confused	减益
+32	
+缓慢
+缓慢
+Slow	减益
+33	
+虚弱
+虚弱
+Weak	减益
+34	
+人鱼
+人鱼
+Merfolk	增益
+35	
+沉默
+沉默
+Silenced	减益
+36	
+破损盔甲
+破损盔甲
+BrokenArmor	减益
+37	
+惊恐
+惊恐
+Horrified	减益
+38	
+狂卷之舌
+狂卷之舌
+TheTongue	减益
+39	
+诅咒狱火
+诅咒狱火
+CursedInferno	减益
+40	
+宠物兔兔
+宠物兔兔
+PetBunny	增益
+41	
+企鹅宝宝
+企鹅宝宝
+BabyPenguin	增益
+42	
+宠物海龟
+宠物海龟
+PetTurtle	增益
+43	
+圣骑士护盾
+圣骑士护盾
+PaladinsShield	增益
+44	
+霜冻
+霜冻
+Frostburn	减益
+45	
+吞噬怪宝宝
+吞噬怪宝宝
+BabyEater	增益
+46	
+冷冻
+冷冻
+Chilled	减益
+47	
+冰冻
+冰冻
+Frozen	减益
+48	
+蜂蜜
+蜂蜜
+Honey	增益
+49	
+矮人
+矮人
+Pygmies	增益
+50	
+骷髅王头宝宝
+骷髅王头宝宝
+BabySkeletronHead	增益
+51	
+黄蜂宝宝
+黄蜂宝宝
+BabyHornet	增益
+52	
+提基幽魂
+提基幽魂
+TikiSpirit	增益
+53	
+宠物蜥蜴
+宠物蜥蜴
+PetLizard	增益
+54	
+宠物鹦鹉
+宠物鹦鹉
+PetParrot	增益
+55	
+松露人宝宝
+松露人宝宝
+BabyTruffle	增益
+56	
+宠物树苗
+宠物树苗
+PetSapling	增益
+57	
+妖灵
+妖灵
+Wisp	增益
+58	
+快速治疗
+快速治疗
+RapidHealing	增益
+59	
+神圣防护
+神圣防护
+ShadowDodge	增益
+60	
+叶状水晶
+叶状水晶
+LeafCrystal	增益
+61	
+恐龙宝宝
+恐龙宝宝
+BabyDinosaur	增益
+62	
+冰障
+冰障
+IceBarrier	增益
+63	
+恐慌！
+恐慌！
+Panic	增益
+64	
+史莱姆宝宝
+史莱姆宝宝
+BabySlime	增益
+65	
+弹簧眼
+弹簧眼
+EyeballSpring	增益
+66	
+雪人宝宝
+雪人宝宝
+BabySnowman	增益
+67	
+燃烧
+燃烧
+Burning	减益
+68	
+窒息
+窒息
+Suffocation	减益
+69	
+灵液
+灵液
+Ichor	减益
+70	
+酸性毒液
+酸性毒液
+Venom	减益
+71	
+武器灌注：酸性毒液
+武器灌注：酸性毒液
+WeaponImbueVenom	增益
+72	
+迈达斯
+迈达斯
+Midas	减益
+73	
+武器灌注：诅咒焰
+武器灌注：诅咒焰
+WeaponImbueCursedFlames	增益
+74	
+武器灌注：火焰
+武器灌注：火焰
+WeaponImbueFire	增益
+75	
+武器灌注：金
+武器灌注：金
+WeaponImbueGold	增益
+76	
+武器灌注：灵液
+武器灌注：灵液
+WeaponImbueIchor	增益
+77	
+武器灌注：纳米机器人
+武器灌注：纳米机器人
+WeaponImbueNanites	增益
+78	
+武器灌注：彩纸
+武器灌注：彩纸
+WeaponImbueConfetti	增益
+79	
+武器灌注：毒药
+武器灌注：毒药
+WeaponImbuePoison	增益
+80	
+黑视
+黑视
+Blackout	减益
+81	
+宠物蜘蛛
+宠物蜘蛛
+PetSpider	增益
+82	
+南瓜娃娃
+南瓜娃娃
+Squashling	增益
+83	
+乌鸦
+乌鸦
+Ravens	增益
+84	
+黑猫
+黑猫
+BlackCat	增益
+85	
+诅咒树苗
+诅咒树苗
+CursedSapling	增益
+86	
+水蜡烛
+水蜡烛
+WaterCandle	减益
+87	
+温馨之火
+温馨之火
+Campfire	增益
+88	
+混沌状态
+混沌状态
+ChaosState	减益
+89	
+心灯
+心灯
+HeartLamp	增益
+90	
+鲁道夫
+鲁道夫
+Rudolph	增益
+91	
+小狗
+小狗
+Puppy	增益
+92	
+格林奇宝宝
+格林奇宝宝
+BabyGrinch	增益
+93	
+弹药箱
+弹药箱
+AmmoBox	增益
+94	
+耐魔性
+耐魔性
+ManaSickness	减益
+95	
+甲虫耐力
+甲虫耐力 (15%)
+BeetleEndurance1	增益
+96	
+甲虫耐力
+甲虫耐力 (30%)
+BeetleEndurance2	增益
+97	
+甲虫耐力
+甲虫耐力 (45%)
+BeetleEndurance3	增益
+98	
+甲虫力量
+甲虫力量 (10%)
+BeetleMight1	增益
+99	
+甲虫力量
+甲虫力量 (20%)
+BeetleMight2	增益
+100	
+甲虫力量
+甲虫力量 (30%)
+BeetleMight3	增益
+101	
+仙灵
+仙灵 (红)
+FairyRed	增益
+102	
+仙灵
+仙灵 (绿)
+FairyGreen	增益
+103	
+潮湿
+潮湿
+Wet	减益
+104	
+采矿
+采矿
+Mining	增益
+105	
+拾心
+拾心
+Heartreach	增益
+106	
+冷静
+冷静
+Calm	增益
+107	
+建筑工
+建筑工
+Builder	增益
+108	
+泰坦
+泰坦
+Titan	增益
+109	
+脚蹼
+脚蹼
+Flipper	增益
+110	
+召唤
+召唤
+Summoning	增益
+111	
+危险感
+危险感
+Dangersense	增益
+112	
+弹药储备
+弹药储备
+AmmoReservation	增益
+113	
+生命力
+生命力
+Lifeforce	增益
+114	
+耐力
+耐力
+Endurance	增益
+115	
+暴怒
+暴怒
+Rage	增益
+116	
+狱火
+狱火
+Inferno	增益
+117	
+怒气
+怒气
+Wrath	增益
+118	
+矿车
+矿车 (左)
+MinecartLeft	增益
+119	
+热恋
+热恋
+Lovestruck	减益
+120	
+恶臭
+恶臭
+Stinky	减益
+121	
+钓鱼
+钓鱼
+Fishing	增益
+122	
+声呐
+声呐
+Sonar	增益
+123	
+宝匣
+宝匣
+Crate	增益
+124	
+温暖
+温暖
+Warmth	增益
+125	
+黄蜂
+黄蜂
+HornetMinion	增益
+126	
+小鬼
+小鬼
+ImpMinion	增益
+127	
+和风鱼
+和风鱼
+ZephyrFish	增益
+128	
+兔兔坐骑
+兔兔坐骑
+BunnyMount	增益
+129	
+猪龙坐骑
+猪龙坐骑
+PigronMount	增益
+130	
+史莱姆坐骑
+史莱姆坐骑
+SlimeMount	增益
+131	
+海龟坐骑
+海龟坐骑
+TurtleMount	增益
+132	
+蜜蜂坐骑
+蜜蜂坐骑
+BeeMount	增益
+133	
+蜘蛛
+蜘蛛
+SpiderMinion	增益
+134	
+双子魔眼
+双子魔眼
+TwinEyesMinion	增益
+135	
+海盗
+海盗
+PirateMinion	增益
+136	
+迷你牛头怪
+迷你牛头怪
+MiniMinotaur	增益
+137	
+史莱姆
+史莱姆
+Slimed	减益
+138	
+矿车
+矿车 (右)
+MinecartRight	增益
+139	
+鲨鱼旋风
+鲨鱼旋风
+SharknadoMinion	增益
+140	
+UFO
+UFO
+UFOMinion	增益
+141	
+UFO坐骑
+UFO坐骑
+UFOMount	增益
+142	
+钻头坐骑
+钻头坐骑
+DrillMount	增益
+143	
+鳞甲怪坐骑
+鳞甲怪坐骑
+ScutlixMount	增益
+144	
+带电
+带电
+Electrified	减益
+145	
+月噬
+月噬
+MoonLeech	减益
+146	
+快乐！
+快乐！
+Sunflower	增益
+147	
+旗帜
+旗帜
+MonsterBanner	增益
+148	
+野性咬噬
+野性咬噬
+Rabies	减益
+149	
+被网住
+被网住
+Webbed	减益
+150	
+着魔
+着魔
+Bewitched	增益
+151	
+夺命杖
+夺命杖
+SoulDrain	增益
+152	
+魔法灯笼
+魔法灯笼
+MagicLantern	增益
+153	
+暗影焰
+暗影焰
+ShadowFlame	减益
+154	
+脸怪宝宝
+脸怪宝宝
+BabyFaceMonster	增益
+155	
+猩红之心
+猩红之心
+CrimsonHeart	增益
+156	
+石化
+石化
+Stoned	减益
+157	
+和平蜡烛
+和平蜡烛
+PeaceCandle	增益
+158	
+星星瓶
+星星瓶
+StarInBottle	增益
+159	
+锋利
+锋利
+Sharpened	增益
+160	
+眩晕
+眩晕
+Dazed	减益
+161	
+致命球
+致命球
+DeadlySphere	增益
+162	
+独角兽坐骑
+独角兽坐骑
+UnicornMount	增益
+163	
+遮蔽
+遮蔽
+Obstructed	减益
+164	
+扭曲
+扭曲
+VortexDebuff	减益
+165	
+树妖祝福
+树妖祝福
+DryadsWard	增益
+166	
+矿车
+矿车 (机械(左))
+MinecartRightMech	增益
+167	
+矿车
+矿车 (机械(右))
+MinecartLeftMech	增益
+168	
+可爱猪龙鱼坐骑
+可爱猪龙鱼坐骑
+CuteFishronMount	增益
+169	
+穿透
+穿透
+BoneJavelin	减益
+170	
+日耀烈焰
+日耀烈焰 (1 层)
+SolarShield1	增益
+171	
+日耀烈焰
+日耀烈焰 (2 层)
+SolarShield2	增益
+172	
+日耀烈焰
+日耀烈焰 (3 层)
+SolarShield3	增益
+173	
+生命星云
+生命星云 (1 层)
+NebulaUpLife1	增益
+174	
+生命星云
+生命星云 (2 层)
+NebulaUpLife2	增益
+175	
+生命星云
+生命星云 (3 层)
+NebulaUpLife3	增益
+176	
+魔力星云
+魔力星云 (1 层)
+NebulaUpMana1	增益
+177	
+魔力星云
+魔力星云 (2 层)
+NebulaUpMana2	增益
+178	
+魔力星云
+魔力星云 (3 层)
+NebulaUpMana3	增益
+179	
+伤害星云
+伤害星云 (1 层)
+NebulaUpDmg1	增益
+180	
+伤害星云
+伤害星云 (2 层)
+NebulaUpDmg2	增益
+181	
+伤害星云
+伤害星云 (3 层)
+NebulaUpDmg3	增益
+182	
+星尘细胞
+星尘细胞 (星尘仆从)
+StardustMinion	增益
+183	
+Celled
+Celled (未使用)
+StardustMinionBleed	减益
+184	
+矿车
+矿车 (木制(右))
+MinecartLeftWood	增益
+185	
+矿车
+矿车 (木制(左))
+MinecartRightWood	增益
+186	
+树妖祸害
+树妖祸害
+DryadsWardDebuff	减益
+187	
+星尘守卫
+星尘守卫
+StardustGuardianMinion	增益
+188	
+星尘之龙
+星尘之龙
+StardustDragonMinion	增益
+189	
+破晓
+破晓
+Daybreak	减益
+190	
+可疑眼球
+可疑眼球
+SuspiciousTentacle	增益
+191	
+同伴方块
+同伴方块
+CompanionCube	增益
+192	
+糖果冲刺
+糖果冲刺
+SugarRush	减益
+193	
+蛇蜥怪坐骑
+蛇蜥怪坐骑
+BasiliskMount	增益
+194	
+强风
+强风
+WindPushed	减益
+195	
+枯萎盔甲
+枯萎盔甲
+WitheredArmor	减益
+196	
+枯萎武器
+枯萎武器
+WitheredWeapon	减益
+197	
+分泌物
+分泌物
+OgreSpit	减益
+198	
+惊人一刻
+惊人一刻
+ParryDamageBuff	增益
+199	
+创意震撼
+创意震撼
+NoBuilding	减益
+200	
+飞翔Gato
+飞翔Gato
+PetDD2Gato	增益
+201	
+闪烁灯芯
+闪烁灯芯
+PetDD2Ghost	增益
+202	
+Hoardagron
+Hoardagron
+PetDD2Dragon	增益
+203	
+双足翼龙诅咒
+双足翼龙诅咒
+BetsysCurse	减益
+204	
+涂油
+涂油
+Oiled	减益
+205	
+弩车恐慌！
+弩车恐慌！
+BallistaPanic	增益
+206	
+很满意
+很满意
+WellFed2	增益
+207	
+酒足饭饱
+酒足饭饱
+WellFed3	增益
+208	
+矿车
+矿车 (沙漠（右）)
+DesertMinecartRight	增益
+209	
+矿车
+矿车 (沙漠（左）)
+DesertMinecartLeft	增益
+210	
+矿车
+矿车 (鲤鱼矿车（右）)
+FishMinecartRight	增益
+211	
+矿车
+矿车 (鲤鱼矿车（左）)
+FishMinecartLeft	增益
+212	
+车
+车
+GolfCartMount	增益
+213	
+血红蝙蝠
+血红蝙蝠
+BatOfLight	增益
+214	
+吸血鬼青蛙
+吸血鬼青蛙
+VampireFrog	增益
+215	
+巴斯特防御
+巴斯特防御
+CatBast	增益
+216	
+雀宝宝
+雀宝宝
+BabyBird	增益
+217	
+埃斯蒂
+埃斯蒂
+UpbeatStar	增益
+218	
+蜜袋鼯
+蜜袋鼯
+SugarGlider	增益
+219	
+小鲨鱼
+小鲨鱼
+SharkPup	增益
+220	
+矿车
+矿车 (蜜蜂（右）)
+BeeMinecartRight	增益
+221	
+矿车
+矿车 (蜜蜂（左）)
+BeeMinecartLeft	增益
+222	
+矿车
+矿车 (瓢虫（右）)
+LadybugMinecartRight	增益
+223	
+矿车
+矿车 (瓢虫（左）)
+LadybugMinecartLeft	增益
+224	
+矿车
+矿车 (猪龙（右）)
+PigronMinecartRight	增益
+225	
+矿车
+矿车 (猪龙（左）)
+PigronMinecartLeft	增益
+226	
+矿车
+矿车 (向日葵（右）)
+SunflowerMinecartRight	增益
+227	
+矿车
+矿车 (向日葵（左）)
+SunflowerMinecartLeft	增益
+228	
+矿车
+矿车 (恶魔地狱矿车（右）)
+HellMinecartRight	增益
+229	
+矿车
+矿车 (恶魔地狱矿车（左）)
+HellMinecartLeft	增益
+230	
+女巫扫帚
+女巫扫帚
+WitchBroom	增益
+231	
+矿车
+矿车 (蘑菇（右）)
+ShroomMinecartRight	增益
+232	
+矿车
+矿车 (蘑菇（左）)
+ShroomMinecartLeft	增益
+233	
+矿车
+矿车 (紫晶（右）)
+AmethystMinecartRight	增益
+234	
+矿车
+矿车 (紫晶（左）)
+AmethystMinecartLeft	增益
+235	
+矿车
+矿车 (黄玉（右）)
+TopazMinecartRight	增益
+236	
+矿车
+矿车 (黄玉（左）)
+TopazMinecartLeft	增益
+237	
+矿车
+矿车 (蓝玉（右）)
+SapphireMinecartRight	增益
+238	
+矿车
+矿车 (蓝玉（左）)
+SapphireMinecartLeft	增益
+239	
+矿车
+矿车 (翡翠（右）)
+EmeraldMinecartRight	增益
+240	
+矿车
+矿车 (翡翠（左）)
+EmeraldMinecartLeft	增益
+241	
+矿车
+矿车 (红玉（右）)
+RubyMinecartRight	增益
+242	
+矿车
+矿车 (红玉（左）)
+RubyMinecartLeft	增益
+243	
+矿车
+矿车 (钻石（右）)
+DiamondMinecartRight	增益
+244	
+矿车
+矿车 (钻石（左）)
+DiamondMinecartLeft	增益
+245	
+矿车
+矿车 (琥珀（右）)
+AmberMinecartRight	增益
+246	
+矿车
+矿车 (琥珀（左）)
+AmberMinecartLeft	增益
+247	
+矿车
+矿车 (甲虫（右）)
+BeetleMinecartRight	增益
+248	
+矿车
+矿车 (甲虫（左）)
+BeetleMinecartLeft	增益
+249	
+矿车
+矿车 (彩虹猫之刃（右）)
+MeowmereMinecartRight	增益
+250	
+矿车
+矿车 (彩虹猫之刃（左）)
+MeowmereMinecartLeft	增益
+251	
+矿车
+矿车 (派对（右）)
+PartyMinecartRight	增益
+252	
+矿车
+矿车 (派对（左）)
+PartyMinecartLeft	增益
+253	
+矿车
+矿车 (荷兰人矿车（右）)
+PirateMinecartRight	增益
+254	
+矿车
+矿车 (荷兰人矿车（左）)
+PirateMinecartLeft	增益
+255	
+矿车
+矿车 (蒸汽朋克（右）)
+SteampunkMinecartRight	增益
+256	
+矿车
+矿车 (蒸汽朋克（左）)
+SteampunkMinecartLeft	增益
+257	
+幸运
+幸运
+Lucky	增益
+258	
+小鸟妖
+小鸟妖
+LilHarpy	增益
+259	
+耳廓狐
+耳廓狐
+FennecFox	增益
+260	
+闪光蝴蝶
+闪光蝴蝶
+GlitteryButterfly	增益
+261	
+小鬼宝宝
+小鬼宝宝
+BabyImp	增益
+262	
+小熊猫宝宝
+小熊猫宝宝
+BabyRedPanda	增益
+263	
+沙漠虎
+沙漠虎
+StormTiger	增益
+264	
+微型世纪之花
+微型世纪之花
+Plantero	增益
+265	
+火烈鸟
+火烈鸟
+Flamingo	增益
+266	
+雷管小猫
+雷管小猫
+DynamiteKitten	增益
+267	
+狼人宝宝
+狼人宝宝
+BabyWerewolf	增益
+268	
+暗影宝箱怪
+暗影宝箱怪
+ShadowMimic	增益
+269	
+矿车
+矿车 (Coffin (Right))
+CoffinMinecartRight	增益
+270	
+矿车
+矿车 (Coffin (Left))
+CoffinMinecartLeft	增益
+271	
+附魔飞刀
+附魔飞刀
+Smolstar	增益
+272	
+挖掘鼹鼠矿车
+挖掘鼹鼠矿车 (左)
+DiggingMoleMinecartRight	增益
+273	
+挖掘鼹鼠矿车
+挖掘鼹鼠矿车 (右)
+DiggingMoleMinecartLeft	增益
+274	
+伏特兔
+伏特兔
+VoltBunny	增益
+275	
+花马坐骑
+花马坐骑
+PaintedHorseMount	增益
+276	
+骏马坐骑
+骏马坐骑
+MajesticHorseMount	增益
+277	
+黑马坐骑
+黑马坐骑
+DarkHorseMount	增益
+278	
+蹦蹦跷坐骑
+蹦蹦跷坐骑
+PogoStickMount	增益
+279	
+海盗船坐骑
+海盗船坐骑
+PirateShipMount	增益
+280	
+阴森树坐骑
+阴森树坐骑
+SpookyWoodMount	增益
+281	
+圣诞老人坦克坐骑
+圣诞老人坦克坐骑
+SantankMount	增益
+282	
+山羊坐骑
+山羊坐骑
+WallOfFleshGoatMount	增益
+283	
+书坐骑
+书坐骑
+DarkMageBookMount	增益
+284	
+史莱姆王子
+史莱姆王子
+KingSlimePet	增益
+285	
+可疑眼睛
+可疑眼睛
+EyeOfCthulhuPet	增益
+286	
+蠕虫吞噬怪
+蠕虫吞噬怪
+EaterOfWorldsPet	增益
+287	
+蜘蛛脑
+蜘蛛脑
+BrainOfCthulhuPet	增益
+288	
+小骷髅王
+小骷髅王
+SkeletronPet	增益
+289	
+宝贝蜜蜂
+宝贝蜜蜂
+QueenBeePet	增益
+290	
+微型毁灭者
+微型毁灭者
+DestroyerPet	增益
+291	
+激光眼和魔焰眼
+激光眼和魔焰眼
+TwinsPet	增益
+292	
+小机械骷髅王
+小机械骷髅王
+SkeletronPrimePet	增益
+293	
+世纪之花幼苗
+世纪之花幼苗
+PlanteraPet	增益
+294	
+玩具石巨人
+玩具石巨人
+GolemPet	增益
+295	
+小猪龙鱼
+小猪龙鱼
+DukeFishronPet	增益
+296	
+小幻影龙
+小幻影龙
+LunaticCultistPet	增益
+297	
+月精灵
+月精灵
+MoonLordPet	增益
+298	
+仙灵公主
+仙灵公主
+FairyQueenPet	增益
+299	
+杰克南瓜灯
+杰克南瓜灯
+PumpkingPet	增益
+300	
+常绿尖叫怪树苗
+常绿尖叫怪树苗
+EverscreamPet	增益
+301	
+冰雪女王
+冰雪女王
+IceQueenPet	增益
+302	
+异星滑板小子
+异星滑板小子
+MartianPet	增益
+303	
+食人魔宝宝
+食人魔宝宝
+DD2OgrePet	增益
+304	
+小双足翼龙
+小双足翼龙
+DD2BetsyPet	增益
+305	
+熔岩鲨坐骑
+熔岩鲨坐骑
+LavaSharkMount	增益
+306	
+钛金屏障
+钛金屏障
+TitaniumStorm	增益
+307	
+皮鞭
+BlandWhipEnemyDebuff	减益
+308	
+迪朗达尔祝福
+迪朗达尔祝福
+SwordWhipPlayerBuff	增益
+309	
+迪朗达尔
+SwordWhipNPCDebuff	减益
+310	
+暗黑收割
+ScytheWhipEnemyDebuff	减益
+311	
+收割时刻
+收割时刻
+ScytheWhipPlayerBuff	增益
+312	
+一种不错的增益
+一种不错的增益
+CoolWhipPlayerBuff	增益
+313	
+鞭炮
+FlameWhipEnemyDebuff	减益
+314	
+丛林之怒
+丛林之怒
+ThornWhipPlayerBuff	增益
+315	
+荆鞭
+ThornWhipNPCDebuff	减益
+316	
+万花筒
+RainbowWhipNPCDebuff	减益
+317	
+史莱姆公主
+史莱姆公主
+QueenSlimePet	增益
+318	
+羽翼史莱姆坐骑
+羽翼史莱姆坐骑
+QueenSlimeMount	增益
+319	
+晨星
+MaceWhipNPCDebuff	减益
+320	
+闪耀史莱姆
+闪耀史莱姆
+GelBalloonBuff	减益
+321	
+控脑术
+控脑术
+BrainOfConfusionBuff	减益
+322	
+泰拉棱镜
+泰拉棱镜
+EmpressBlade	增益
+323	
+狱炎
+狱炎
+OnFire3	减益
+324	
+冻伤
+冻伤
+Frostburn2	减益
+325	
+小雪怪
+小雪怪
+FlinxMinion	增益
+326	
+脊柱骨鞭
+BoneWhipNPCDebuff	减益
+327	
+伯尼
+伯尼
+BerniePet	增益
+328	
+咕噜咪
+咕噜咪
+GlommerPet	增益
+329	
+小独眼巨鹿
+小独眼巨鹿
+DeerclopsPet	增益
+330	
+猪
+猪
+PigPet	增益
+331	
+切斯特
+切斯特
+ChesterPet	增益
+332	
+稍饿
+稍饿
+NeutralHunger	减益
+333	
+饥饿
+饥饿
+Hunger	减益
+334	
+极饿
+极饿
+Starving	减益
+335	
+阿比盖尔
+阿比盖尔
+AbigailMinion	增益
+336	
+丰盛大餐
+丰盛大餐
+HeartyMeal	增益
+337	
+触手钉锤
+TentacleSpike	减益
+338	
+放屁车
+放屁车
+FartMinecartRight	增益
+339	
+放屁车
+放屁车
+FartMinecartLeft	增益
+340	
+冷鞭
+CoolWhipNPCDebuff	增益
+341	
+皇家史莱姆
+皇家史莱姆
+DualSlimePet	增益
+342	
+月亮祝福
+月亮祝福
+WolfMount	增益
+343	
+生物群落视觉
+生物群落视觉
+BiomeSight	增益
+344	
+血腥屠宰
+血腥屠宰
+BloodButcherer	减益
+345	
+祝尼魔
+祝尼魔
+JunimoPet	增益
+346	
+泰拉放屁车
+泰拉放屁车
+TerraFartMinecartRight	增益
+347	
+泰拉放屁车
+泰拉放屁车
+TerraFartMinecartLeft	增益
+348	
+战略家
+战略家
+WarTable	增益
+349	
+蓝鸡
+蓝鸡
+BlueChickenPet	增益
+350	
+暗影蜡烛
+暗影蜡烛
+ShadowCandle	减益
+351	
+Spiffo
+Spiffo
+Spiffo	增益
+352	
+洞穴园丁
+洞穴园丁
+CavelingGardener	增益
+353	
+微光闪烁
+微光闪烁
+Shimmer	减益
+354	
+最土的块
+最土的块
+DirtiestBlock	增益
